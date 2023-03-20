@@ -105,6 +105,9 @@ class UserGenerator:
                 if i == 500000:
                     break
                 user_id, movie_id, rating, _ = line
+                # FIXME: Skip missing movie id.
+                if movie_id not in self.__mov:
+                    continue
                 genres = self.__mov.get(movie_id).get("genres")
                 title = self.__mov.get(movie_id).get("title")
                 if user_id not in user_all:
