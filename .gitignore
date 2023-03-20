@@ -1,2 +1,8 @@
 **/__pycache__/
 .env/
+
+# Data that is necessary but is too large.
+data/metadata_prep.csv
+data/movies_metadata.csv
+data/ratings.csv
+*.sqlite
